@@ -2,6 +2,8 @@
 (require racket/bool)
 (require rackunit)
 
+#| An implementation of BSTs in Racket with some useful functions |#
+
 (struct bst (val left right) #:mutable #:transparent)
 
 (define (leaf val)

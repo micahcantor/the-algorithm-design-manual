@@ -1,7 +1,6 @@
 #lang racket/base
 
-#| A queue is an abstract data structure that supports first-in, first-out (FIFO) data retrievial. |#
-
+#| An implementation of the queue abstract data type in Racket |#
 #| Operations: |#
 ;; Enqueue(q, v) [O(1)] : insert an element at the back of the queue
 ;; Dequeue(q) [O(1)] : return the element at the front of the queue
