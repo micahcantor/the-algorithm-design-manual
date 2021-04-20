@@ -1,0 +1,1 @@
+This repo contains some of my code and worked exercises from Skiena's *The Algorithm Design Manual*
