@@ -1,17 +1,17 @@
 #lang racket/base
 (require data/queue)
 
-(define (bfs g root)
+(define (bfs graph root)
   (define visited (make-hash (list (cons root null))))
   (define q (make-queue))
   (enqueue! q root)
   (while (not (queue-empty? q))
       (define vertex (dequeue! q))
-      (for ([neighbor (hash-ref g vertex)])
-        (unless (hash-ref visited neighbor #f)
+      (for ([neighbor (hash-ref graph vertex)])
+        (when (not (hash-ref visited neighbor #f))
           (hash-set! visited neighbor null)
           (enqueue! q neighbor))))
-  visited)
+  (hash-keys visited))
 
 (define-syntax-rule (while cond-expr body ...)
   (let loop ()
