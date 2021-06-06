@@ -1,7 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include <linked-list.h>
+
+typedef struct list {
+  int head;
+  struct list *next;
+} list;
 
 int car (list *lst) {
   return lst->head;
